@@ -1,12 +1,12 @@
 @keyframes formInfoPhoto {
 	0% {
-		opacity: 0;
-		transform: translate(-200px, 100px) scale(2);
+		opacity: 0.8;
+		transform: translate(500px, 300px) scale(3) rotate(45deg);
 	}
 
 	100% {
 		opacity: 1;
-		transform: translate(0, 0);
+		transform: translate(0, 0) scale(1) rotate(0);
 	}
 }
 

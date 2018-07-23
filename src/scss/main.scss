@@ -35,11 +35,13 @@ body {
 		height: 138px;
 		text-align: center;
 		background-color: $color-light;
+	}
 
-		.img {
-			display: block;
-			animation: formInfoPhoto 1s ease;
-		}
+	&__img {
+		position: absolute;
+		z-index: 99;
+		display: block;
+		animation: formInfoPhoto 1s ease;
 	}
 
 	&__sheet {
@@ -134,11 +136,23 @@ body {
 	}
 
 	&__meter {
+		position: relative;
+
 		svg {
 			width: 254px;
 			height: 134px;
 			max-width: 100%;
 		}
+	}
+
+	&__warning {
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		min-height: 8px;
+		font-size: 8px;
+		color: $color-red;
+		background: $color-yellow;
 	}
 
 	@include breakpoint(small only) {
