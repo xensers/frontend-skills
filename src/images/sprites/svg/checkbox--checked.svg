@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="19px" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>checkbox--checked</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="checkbox--checked">
+            <rect id="Rounded" fill="#0093D7" fill-rule="nonzero" x="0" y="0" width="19" height="19" rx="5"></rect>
+            <polygon id="Path" fill="#FFFFFF" points="3.00158046 10.32259 6.53917433 14.1203987 15.9494096 5.69742338 14.5794471 4.18538156 6.53917433 11.4602367 4.31968852 9.15289012"></polygon>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,46 @@
+// stylelint-disable scss/dollar-variable-empty-line-before
+
+// COLORS
+
+$color-black: #010101;
+$color-dark: #333;
+$color-white: #fff;
+$color-gray: #666;
+$color-light-gray: #eee;
+$color-light: #f0f0f0;
+$color-ink-pen: #0020ff;
+$color-cerulean: #0093d7;
+
+// FONTS
+$font-family-roboto: "Roboto", sans-serif;
+$font-family-neucha: "Neucha", cursive;
+
+// FOUNDATION
+$body-font-family: $font-family-roboto;
+$global-weight-normal: 500;
+$global-lineheight: 1.834;
+$body-background: $color-light;
+$body-font-color: $color-gray;
+$header-color: $color-black;
+$header-lineheight: 1.223;
+$header-styles: (
+	small: (
+		"h1": ("font-size": 24),
+		"h2": ("font-size": 20),
+		"h3": ("font-size": 19),
+		"h4": ("font-size": 18),
+		"h5": ("font-size": 17),
+		"h6": ("font-size": 16),
+	),
+	medium: (
+		"h1": ("font-size": 48),
+		"h2": ("font-size": 40),
+		"h3": ("font-size": 31),
+		"h4": ("font-size": 24),
+		"h5": ("font-size": 18),
+		"h6": ("font-size": 16),
+	),
+);
+
+$grid-container: 690px;
+$grid-columns: 8;
