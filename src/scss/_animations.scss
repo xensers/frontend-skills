@@ -1,0 +1,36 @@
+@keyframes formInfoPhoto {
+	0% {
+		opacity: 0;
+		transform: translate(-200px, 100px) scale(2);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+}
+
+@keyframes fromStamp {
+	0% {
+		transform: scale(10);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fromCheked {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
