@@ -1,5 +1,37 @@
 import './vendor';
 
+function fillFormAnimate() {
+	const $target = $('.info__sheet_item_text span');
+	const hold = 1000;
+
+	$.each($target, (index, element) => {
+		setTimeout(() => {
+			let $element = $(element);
+			let lastWidth = $element.css('width');
+
+			$element.css('width', '0');
+			$element.css('opacity', '1');
+			$element.css({
+				width: lastWidth,
+				transition: 'width 5s',
+			});
+		}, index * hold);
+	});
+}
+
+function checkboxAnimate() {
+	const $target = $('.checkbox.chek-it');
+	const hold = 500;
+
+	setTimeout(() => {
+		$.each($target, (index, element) => {
+			setTimeout(() => {
+				$(element).addClass('cheked');
+			}, index * hold);
+		});
+	}, 8000);
+}
+
 function jsSkillAnimate(totalPercent) {
 	const $elementСounter = $('.skillJs__counter');
 	const $elementArrow = $('.skillJs__meter_arrow');
@@ -39,39 +71,8 @@ function jsSkillAnimate(totalPercent) {
 	}
 }
 
-function fillFormAnimate() {
-	const $target = $('.info__sheet_item_text span');
-	const hold = 1000;
-
-	$.each($target, (index, element) => {
-		setTimeout(() => {
-			let lastWidth = $(element).css('width');
-
-			$(element).css('width', '0');
-			$(element).css('opacity', '1');
-			$(element).css({
-				width: lastWidth,
-				transition: 'width 5s',
-			});
-		}, index * hold);
-	});
-}
-
-function checkboxAnimate() {
-	const $target = $('.checkbox.chek-it');
-	const hold = 500;
-
-	setTimeout(() => {
-		$.each($target, (index, element) => {
-			setTimeout(() => {
-				$(element).addClass('cheked');
-			}, index * hold);
-		});
-	}, 8000);
-}
-
 jQuery(document).ready(() => {
 	fillFormAnimate();
 	checkboxAnimate();
-	setTimeout(jsSkillAnimate, 12000, 40);
+	setTimeout(jsSkillAnimate, 13000, 40);
 });
