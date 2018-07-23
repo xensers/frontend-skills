@@ -39,46 +39,6 @@ $sprites: (
 			total_height: 332,
 		),
 	),
-	"checkbox--checked": (
-		normal: (
-			x: 186,
-			y: 140,
-			width: 19,
-			height: 19,
-			image: "sprites.png",
-			total_width: 324,
-			total_height: 166,
-		),
-		retina: (
-			x: 372,
-			y: 280,
-			width: 38,
-			height: 38,
-			image: "sprites@2x.png",
-			total_width: 648,
-			total_height: 332,
-		),
-	),
-	"checkbox--unchecked": (
-		normal: (
-			x: 207,
-			y: 140,
-			width: 19,
-			height: 19,
-			image: "sprites.png",
-			total_width: 324,
-			total_height: 166,
-		),
-		retina: (
-			x: 414,
-			y: 280,
-			width: 38,
-			height: 38,
-			image: "sprites@2x.png",
-			total_width: 648,
-			total_height: 332,
-		),
-	),
 );
 
 @each $name in map-keys($sprites) {
