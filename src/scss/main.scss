@@ -16,7 +16,7 @@ body {
 .section {
 	margin-bottom: 2px;
 	padding: 28px 20px;
-	background: url("../images/section-bg.png") repeat-y $color-light-gray;
+	background: url("../images/section-bg.png") repeat-y $color-fantasy;
 	background-size: 100% auto;
 	@include retina {
 		background-image: url("../images/section-bg@2x.png");
@@ -113,7 +113,7 @@ body {
 
 				&.cheked {
 					background: $color-cerulean url('data:image/svg+xml;utf8,<svg viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon id="Path" fill="#FFFFFF" points="3.00158046 10.32259 6.53917433 14.1203987 15.9494096 5.69742338 14.5794471 4.18538156 6.53917433 11.4602367 4.31968852 9.15289012"></polygon></svg>');
-					animation: fromCheked 0.5s ease forwards;
+					animation: fromCheked 0.5s ease;
 				}
 			}
 		}

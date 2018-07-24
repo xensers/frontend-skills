@@ -14,10 +14,9 @@ function fillFormAnimate() {
 
 			$element.css('width', '0');
 			$element.css('opacity', '1');
-			$element.css({
+			$element.animate({
 				width: lastWidth,
-				transition: 'width 5s',
-			});
+			}, hold, 'linear');
 		}, index * hold);
 	});
 }
@@ -38,7 +37,7 @@ function checkboxAnimate() {
 
 /**
  * Анимация для секции "Мой уровень владения JavaScript"
- * @param  {number} totalPercent Уровень владения JS в процентах, целое число от 0 до 100
+ * @param {number} totalPercent  Уровень владения JS в процентах, целое число от 0 до 100
  * @param {boolean} offScale     Эффект зашкаливания значений, логический тип
  */
 function jsSkillAnimate(totalPercent, offScale = false) {
@@ -72,7 +71,7 @@ function jsSkillAnimate(totalPercent, offScale = false) {
 	}
 
 	if (deg < degMin) {
-		deg = degMin - 1;
+		deg = degMin;
 	} else if (deg > degMax) {
 		deg = degMax;
 	}
@@ -80,7 +79,7 @@ function jsSkillAnimate(totalPercent, offScale = false) {
 	// Обновление значений счетчика баллов и отклонения стрелки
 	$elementСounter.html(count += 1);
 	$elementArrow.attr({
-		transform: `rotate(${deg})`,
+		transform: `rotate(${deg}, 130, 124)`,
 	});
 
 	// Установка цвета для счетчика баллов
