@@ -3,7 +3,7 @@
 	"version": "1.0.1",
 	"description": "Тестовое задание от Наумова Евгения",
 	"scripts": {},
-	"author": "Eugene Naumov <d.artemov@9-lines.com>",
+	"author": "Eugene Naumov <xensers@gmail.com>",
 	"license": "ISC",
 	"devDependencies": {
 		"autoprefixer": "8.6.2",
