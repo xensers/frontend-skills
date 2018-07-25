@@ -4,35 +4,37 @@ import './vendor';
  * Анимация заполнения бланка
  */
 function fillFormAnimate() {
-	const $target = $('.info__sheet_item_text span');
+	const elements = document.querySelectorAll('.info__sheet_item_text span');
 	const hold = 1000;
 
-	$.each($target, (index, element) => {
-		setTimeout(() => {
-			let $element = $(element);
-			let lastWidth = $element.css('width');
+	for (let index = elements.length - 1; index >= 0; index--) {
+		let element = elements[index];
+		let lastWidth = element.offsetWidth;
 
-			$element.css('width', '0');
-			$element.css('opacity', '1');
-			$element.animate({
-				width: lastWidth,
-			}, hold, 'linear');
+		element.style.width = '0';
+		element.style.opacity = '1';
+		element.style.transition = `width ${hold}ms linear`;
+
+		setTimeout(() => {
+			element.style.width = `${lastWidth}px`;
 		}, index * hold);
-	});
+	}
 }
 
 /**
  * Анимация отметки умений
  */
 function checkboxAnimate() {
-	const $target = $('.checkbox.chek-it');
+	const elements = document.querySelectorAll('.checkbox.chek-it');
 	const hold = 500;
 
-	$.each($target, (index, element) => {
+	for (let index = elements.length - 1; index >= 0; index--) {
+		let element = elements[index];
+
 		setTimeout(() => {
-			$(element).addClass('cheked');
+			element.classList.add('cheked');
 		}, index * hold);
-	});
+	}
 }
 
 /**
@@ -41,12 +43,13 @@ function checkboxAnimate() {
  * @param {boolean} offScale     Эффект зашкаливания значений, логический тип
  */
 function jsSkillAnimate(totalPercent, offScale = false) {
-	const $elementСounter = $('.skillJs__counter');
-	const $elementArrow = $('.skillJs__meter_arrow');
-	const color = ['#ffc814', '#a3cd3b', '#0093d7'];
+	const elementСounter = document.querySelector('.skillJs__counter');
+	const elementArrow = document.querySelector('.skillJs__meter_arrow');
+	const elementWarning = document.querySelector('.skillJs__warning');
+	const [colorYellow, colorGreen, colorBlue] = ['#ffc814', '#a3cd3b', '#0093d7'];
 	let countMin = 0;
 	let countMax = 999;
-	let count = Number($elementСounter.html());
+	let count = Number(elementСounter.innerHTML);
 	let percent = count / countMax * 100;
 	let degMin = -30;
 	let degMax = 160;
@@ -55,12 +58,13 @@ function jsSkillAnimate(totalPercent, offScale = false) {
 
 	// Эффект зашкаливания
 	if (offScale && percent >= totalPercent) {
-		$elementСounter.html(count -= 20);
+		count -= 20;
+		elementСounter.innerHTML = count;
 		if (percent > 80) {
-			$('.skillJs__warning').html('Слишком большое ЧСВ!!!');
+			elementWarning.innerHTML = 'Слишком большое ЧСВ!!!';
 		}
 	} else {
-		$('.skillJs__warning').html('');
+		elementWarning.innerHTML = '';
 	}
 
 	// Не допускаем выхода за допустимые пределы
@@ -77,24 +81,17 @@ function jsSkillAnimate(totalPercent, offScale = false) {
 	}
 
 	// Обновление значений счетчика баллов и отклонения стрелки
-	$elementСounter.html(count += 1);
-	$elementArrow.attr({
-		transform: `rotate(${deg}, 130, 124)`,
-	});
+	count++;
+	elementСounter.innerHTML = count;
+	elementArrow.setAttribute('transform', `rotate(${deg}, 130, 124)`);
 
 	// Установка цвета для счетчика баллов
 	if (percent > 0 && percent < 33) {
-		$elementСounter.css({
-			color: color[0],
-		});
+		elementСounter.style.color = colorYellow;
 	} else if (percent > 33 && percent < 66) {
-		$elementСounter.css({
-			color: color[1],
-		});
+		elementСounter.style.color = colorGreen;
 	} else {
-		$elementСounter.css({
-			color: color[2],
-		});
+		elementСounter.style.color = colorBlue;
 	}
 
 	// Рекурсия
@@ -103,8 +100,8 @@ function jsSkillAnimate(totalPercent, offScale = false) {
 	}
 }
 
-jQuery(document).ready(() => {
-	setTimeout(fillFormAnimate, 500);
+document.addEventListener('DOMContentLoaded', () => {
+	setTimeout(fillFormAnimate, 1000);
 	setTimeout(checkboxAnimate, 7000);
 	setTimeout(jsSkillAnimate, 13000, 100, true);
 });
