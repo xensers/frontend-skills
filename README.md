@@ -1,9 +1,9 @@
 # Начало работы
 
-Для начала работы над проектом необходимо [скачать архив](https://github.com/xensers/test-task-9lines/archive/master.zip) или клонировать текущий репозиторий:
+Для начала работы над проектом необходимо [скачать архив](https://github.com/xensers/frontend-skills/archive/master.zip) или клонировать текущий репозиторий:
 
 ```bash
-git clone https://github.com/xensers/test-task-9lines.git
+git clone https://github.com/xensers/frontend-skills.git
 ```
 
 Далее следует установить npm-библиотеки:
